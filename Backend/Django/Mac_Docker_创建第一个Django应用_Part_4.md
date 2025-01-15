@@ -28,8 +28,9 @@
 <!-- {% endraw %} -->
 
 POST方法可能会去修改数据，因此要防止伪造请求攻击，只要是POST到站内的URL都应该包含这条模版标记
+<!-- {% raw %} -->
 **{% c s r f\_token %}**
-
+<!-- {% endraw %} -->
 
 修改View中的Vote方法
 **polls/views.py**
