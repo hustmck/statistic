@@ -2,3 +2,5 @@
 *.Rmd
 *.css
 *.nb.html
+node_modules
+.idea
