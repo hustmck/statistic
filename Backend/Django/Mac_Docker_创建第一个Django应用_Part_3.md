@@ -165,7 +165,7 @@ def detail(request, question_id):
 
 因为这是紧耦合的做法（当你修改项目的URL的时候，还需要去改动模版），可以使用模版标记来去掉模版对特定URL路径的依赖，改为：
 
-```python
+```django
 <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
 ```
 
@@ -196,7 +196,7 @@ urlpatterns = [
 
 修改**polls/templates/polls/index.html**
 
-```python
+```django
 <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
 ```
 这样Django就知道如何生成动态的超链接指向了，而去要修改app的URL也只需要修改对应**app/urls.py** ，无需修改模版。由于模版中往往包含超链接，这样的好处还是很大的。
