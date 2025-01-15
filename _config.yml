@@ -2,7 +2,6 @@ title: CK的知识库 2025
 description: I'm trying to merge my Knowledge to github, this is a good way to organise it and the output process is good for memorization. 
 google_analytics:
 show_downloads: false
-remote_theme: pages-themes/modernist@v0.2.0
+remote_theme: pages-themes/hexo-theme-next
 plugins:
 - jekyll-remote-theme
-- faraday-retry
