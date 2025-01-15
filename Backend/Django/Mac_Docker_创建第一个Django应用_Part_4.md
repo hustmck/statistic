@@ -8,6 +8,8 @@
 
 ## 1. 简单表单
 **polls/templates/polls/detail.html**
+
+<!-- {% raw %} -->
 ```html
 <h1>{{ question.question_text }}</h1>
 
@@ -23,6 +25,7 @@
 <input type="submit" value="Vote" />
 </form>
 ```
+<!-- {% endraw %} -->
 
 POST方法可能会去修改数据，因此要防止伪造请求攻击，只要是POST到站内的URL都应该包含这条模版标记
 **{% c s r f\_token %}**
