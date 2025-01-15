@@ -177,7 +177,7 @@ url(r'^specifics/(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
 ```
 
 ### 7. 使用带命名空间的URL名
-如果项目中有多个**app** 不只一个app有**detail View**，如何使用模版标记`{% url %} template tag`?
+如果项目中有多个**app** 不只一个app有**detail View**，如何使用模版标记 <!-- {% raw %} -->`{% url %} template tag`?<!-- {% endraw %} -->
 
 在**polls/urls.py**中加入 `app_name = 'polls'` 变成
 
@@ -197,7 +197,7 @@ urlpatterns = [
 
 修改**polls/templates/polls/index.html**
 
-```raw
+```html
 <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
 ```
 这样Django就知道如何生成动态的超链接指向了，而去要修改app的URL也只需要修改对应**app/urls.py** ，无需修改模版。由于模版中往往包含超链接，这样的好处还是很大的。
